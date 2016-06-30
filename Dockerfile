@@ -20,9 +20,6 @@ RUN apt-get -y update && \
 RUN php5enmod gearman
 RUN php5enmod memcached
 
-# Upgrade npm
-RUN npm -g install npm@latest
-
 # Add node packages for minifiers
 RUN npm install -g uglify-js && \
     npm install -g uglifycss
